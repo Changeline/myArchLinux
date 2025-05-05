@@ -1,0 +1,76 @@
+# How to Install Outlook and Teams as Desktop Apps (PWAs) on Arch Linux with Chrome
+
+This guide explains how to install Microsoft Outlook and Teams as Progressive Web Apps (PWAs) using Google Chrome on your Arch Linux system. PWAs provide a native app-like experience and integrate well with desktop environments, including Hyprland.
+
+---
+
+## Prerequisites
+
+- Arch Linux system with yay (AUR helper)
+- zsh and kitty (for terminal commands)
+
+---
+
+## Step 1: Install Google Chrome
+
+Open your terminal (kitty) and run:
+```
+yay -S google-chrome
+```
+This command installs Google Chrome from the AUR, which is required for installing PWAs.
+
+---
+
+## Step 2: Log In to Office.com
+
+1. Launch Chrome:
+    ```
+    google-chrome &
+    ```
+2. Navigate to [office.com](https://office.com).
+3. Sign in with your Microsoft account credentials.
+
+---
+
+## Step 3: Open Outlook and Teams Web Apps
+
+- For Outlook: Click the Outlook icon or go to [outlook.office.com](https://outlook.office.com).
+- For Teams: Click the Teams icon or go to [teams.microsoft.com](https://teams.microsoft.com).
+
+---
+
+## Step 4: Install as Progressive Web Apps (PWAs)
+
+1. With the Outlook or Teams web app open in Chrome, click the three-dot menu (⋮) in the top-right corner.
+2. Go to **"Save and share"** (or look for **"Install Outlook"** or **"Install Teams"**).
+3. Click **"Install Outlook"** or **"Install Teams"**.
+    - Chrome may also show an install icon (a computer with a down arrow) in the address bar. Clicking this will also prompt installation.
+4. Confirm the installation. The app will now open in its own window and appear in your application launcher menu (Hyprland’s app menu or similar).
+
+---
+
+## Step 5: Launch and Use Your New Apps
+
+- You can now start Outlook and Teams like regular desktop apps from your application menu.
+- They support features like notifications, dedicated windows, and can be pinned for quick access.
+
+---
+
+## Notes & Tips
+
+- PWAs are the recommended way to use Teams and Outlook on Linux, as official native clients are no longer supported.
+- The installed PWAs create desktop entries in `~/.local/share/applications/`, making them easy to launch and integrate with Hyprland and your workflow.
+- For uninstalling, right-click the app icon in Chrome’s app launcher or remove the corresponding `.desktop` file.
+
+---
+
+## Summary Table
+
+| App      | Web Address                  | Install Menu Option      |
+|----------|------------------------------|-------------------------|
+| Outlook  | [outlook.office.com](https://outlook.office.com) | Install Outlook         |
+| Teams    | [teams.microsoft.com](https://teams.microsoft.com) | Install Teams           |
+
+---
+
+You now have Outlook and Teams installed as desktop-like apps on your Arch Linux system, fully integrated with your Hyprland environment and ready for daily use.
